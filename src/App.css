@@ -1,0 +1,18 @@
+nav {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+  }
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  .home-page img {
+    max-width: 100%;
+    height: auto;
+  }
+  
