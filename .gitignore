@@ -1,0 +1,22 @@
+# Backend
+.env
+node_modules/
+*.log
+dist/
+build/
+
+# Frontend
+node_modules/
+.DS_Store
+build/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.log
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
