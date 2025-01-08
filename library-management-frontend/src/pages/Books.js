@@ -1,13 +1,38 @@
-import React from "react";
-import booksImage from "../assets/images/books-page-placeholder.png";
-import "./Books.css";
+import React, { useState } from "react";
+import SearchBar from "../components/SearchBar";
+import BookCard from "../components/BookCard";
+import "./Books.css"; // Optional styles for Books page
 
 const Books = () => {
+  const [books, setBooks] = useState([
+    { id: 1, title: "Book One", author: "Author One" },
+    { id: 2, title: "Book Two", author: "Author Two" },
+    { id: 3, title: "Book Three", author: "Author Three" },
+  ]);
+  const [filteredBooks, setFilteredBooks] = useState(books);
+
+  const handleSearch = (query) => {
+    const filtered = books.filter((book) =>
+      book.title.toLowerCase().includes(query.toLowerCase()) ||
+      book.author.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredBooks(filtered);
+  };
+
   return (
     <div className="books-page">
-      <h2>Books Collection</h2>
-      <p>Browse through our wide selection of books!</p>
-      <img src={booksImage} alt="Books Page" className="books-image" />
+      <h1>Books</h1>
+      <SearchBar onSearch={handleSearch} />
+      <div className="book-list">
+        {filteredBooks.map((book) => (
+          <BookCard
+            key={book.id}
+            title={book.title}
+            author={book.author}
+            onClick={() => alert(`You clicked on ${book.title}`)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

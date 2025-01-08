@@ -1,21 +1,26 @@
-// App.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Books from "./pages/Books";
 import Login from "./pages/Login";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import "./App.css"; // If you want to style the layout
 
 const App = () => {
   return (
     <Router>
-      <nav>
-        <Link to="/">Home</Link> | <Link to="/books">Books</Link> | <Link to="/login">Login</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/books" element={<Books />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
+      <div className="app">
+        <Sidebar /> {/* Sidebar on the left */}
+        <div className="main-content"> {/* Main content */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/books" element={<Books />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </div>
+        <Footer /> {/* Footer at the bottom */}
+      </div>
     </Router>
   );
 };

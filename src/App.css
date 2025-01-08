@@ -1,18 +1,15 @@
-nav {
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-  }
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #007bff;
-  }
-  nav a:hover {
-    text-decoration: underline;
-  }
-  .home-page img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+.app {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 200px; /* Adjust based on Sidebar width */
+  width: calc(100% - 200px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}

@@ -1,0 +1,23 @@
+.book-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-card h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .book-card p {
+    margin: 0.5rem 0 0;
+    color: #555;
+  }
+  
+  .book-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
