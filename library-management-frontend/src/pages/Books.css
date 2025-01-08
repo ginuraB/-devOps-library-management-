@@ -1,9 +1,0 @@
-.books-page {
-  padding: 1rem;
-}
-
-.book-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}

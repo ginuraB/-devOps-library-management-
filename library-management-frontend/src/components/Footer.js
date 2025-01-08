@@ -1,10 +1,9 @@
 import React from "react";
-import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <p>&copy; {new Date().getFullYear()} Library Management System. All rights reserved.</p>
+    <footer className="bg-gray-800 text-white text-center py-2">
+      &copy; {new Date().getFullYear()} Library Management System By "Ginura Binath". All rights reserved.
     </footer>
   );
 };

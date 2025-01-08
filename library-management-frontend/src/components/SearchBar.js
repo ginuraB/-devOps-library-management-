@@ -1,23 +1,25 @@
 import React, { useState } from "react";
-import "./SearchBar.css";
 
 const SearchBar = ({ onSearch }) => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [query, setQuery] = useState("");
 
   const handleSearch = (e) => {
     e.preventDefault();
-    onSearch(searchQuery);
+    onSearch(query);
   };
 
   return (
-    <form className="search-bar" onSubmit={handleSearch}>
+    <form className="flex justify-center gap-2" onSubmit={handleSearch}>
       <input
+        className="border border-gray-300 rounded px-3 py-2 w-full sm:w-1/2"
         type="text"
-        placeholder="Search books..."
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
+        placeholder="Search for books..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
       />
-      <button type="submit">Search</button>
+      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Search
+      </button>
     </form>
   );
 };

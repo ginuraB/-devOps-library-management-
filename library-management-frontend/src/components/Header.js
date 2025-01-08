@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css"; // Create a CSS file for styling
+
 import logo from "../assets/images/library-logo.png";
 import banner from "../assets/images/library-banner.png";
 

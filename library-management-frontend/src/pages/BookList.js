@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import BookCard from "../components/BookCard";
 import SearchBar from "../components/SearchBar";
-import "./BookList.css";
 
 const BookList = () => {
   const [books, setBooks] = useState([
@@ -13,19 +12,19 @@ const BookList = () => {
   const [filteredBooks, setFilteredBooks] = useState(books);
 
   const handleSearch = (query) => {
-    const result = books.filter(
+    const filtered = books.filter(
       (book) =>
         book.title.toLowerCase().includes(query.toLowerCase()) ||
         book.author.toLowerCase().includes(query.toLowerCase())
     );
-    setFilteredBooks(result);
+    setFilteredBooks(filtered);
   };
 
   return (
-    <div className="book-list-page">
-      <h1>Book List</h1>
+    <div className="p-4 ml-64">
+      <h1 className="text-2xl font-bold mb-4">Book List</h1>
       <SearchBar onSearch={handleSearch} />
-      <div className="book-list">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
         {filteredBooks.map((book) => (
           <BookCard
             key={book.id}

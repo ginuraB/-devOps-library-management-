@@ -1,5 +1,5 @@
 import React from "react";
-import "./BookDetails.css";
+
 
 const BookDetails = ({ title, author, description, onBorrow }) => {
   return (

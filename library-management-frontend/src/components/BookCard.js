@@ -1,11 +1,13 @@
 import React from "react";
-import "./BookCard.css";
 
 const BookCard = ({ title, author, onClick }) => {
   return (
-    <div className="book-card" onClick={onClick}>
-      <h3>{title}</h3>
-      <p>{author}</p>
+    <div
+      className="border border-gray-300 rounded-lg p-4 shadow-md hover:shadow-lg cursor-pointer"
+      onClick={onClick}
+    >
+      <h3 className="text-xl font-semibold">{title}</h3>
+      <p className="text-gray-600">{author}</p>
     </div>
   );
 };
